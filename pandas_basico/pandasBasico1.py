@@ -2,9 +2,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-## criando series
-
-
 ## criando dataframe
 
 ## lendo arquivo excel
