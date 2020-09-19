@@ -55,3 +55,11 @@ print("Os elementos com densidade maior que a média:")
 
 ## usa operador para selecionar os elementos de densidades maior que a media
 print(densidades[densidades > media])
+
+print("Densidades original:")
+print(densidades)
+
+print("Densidades removendo elementos usando drop:")
+
+densidades = densidades.drop(["Rb", "Cs"])
+print(densidades)
