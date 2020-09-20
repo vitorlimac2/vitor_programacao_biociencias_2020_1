@@ -58,6 +58,8 @@ print("Mediana de transcritos = %.2f" % df['Número de transcritos'].median())
 ##################################################################################################
 print("Maior número de transcritos = %d" % df['Número de transcritos'].max())
 
+
+
 ##################################################################################################
 maxTranscrito = df['Número de transcritos'].max()
 print("Gene com maior número de transcritos (linha inteira):")
