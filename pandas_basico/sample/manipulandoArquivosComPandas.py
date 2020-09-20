@@ -3,20 +3,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-
-## um dataframe pode ser um dict de series
-d = {'coluna1': pd.Series([1., 2., 3.], index=['a', 'b', 'c']),
-     'coluna2': pd.Series([1., 2., 3., 4.], index=['a', 'b', 'c', 'd']),
-     'coluna3': pd.Series([10., 2., 8.], index=['b', 'c', 'd'])}
-
-## criando dataframe
-df = pd.DataFrame(d)
-print(df)
-
-print("Imprimindo coluna 2:")
-print(df['coluna2'])
+#### ATENÇÃO: Instale o pacote xlrd >= 1.0.0 para ler arquivos Excel
+# ## Use pip
+# ou
+## conda install -c anaconda xlrd
+#
+## ou diretamente pelo PyCharm
 
 ## lendo arquivo excel
+with pd.ExcelFile('../data/quantificacao_exemplo.xlsx') as xlsx:
+    df = pd.read_excel(xlsx, 'Counts')
+
+print(df)
+
+######################################
+### normalizando os niveis de expressão por
+### CPM = numero de counts * 10**6/total numero de counts
+
+
+
 
 ## lendo arquivo csv
 

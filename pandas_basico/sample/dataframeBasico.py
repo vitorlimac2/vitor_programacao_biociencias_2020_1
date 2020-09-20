@@ -46,28 +46,33 @@ print(df.columns)
 print("Número de elementos não-nulos:")
 print(df.count())
 
-#########################################33
+##################################################################################################
 print("Total de transcritos = %d" % df['Número de transcritos'].sum())
-## média de transcritos
+
+##################################################################################################
 print("Média de transcritos = %.2f" % df['Número de transcritos'].mean())
-## mediana de número de transcritos
+
+##################################################################################################
 print("Mediana de transcritos = %.2f" % df['Número de transcritos'].median())
 
-## gene com maior numero de transcritos
+##################################################################################################
 print("Maior número de transcritos = %d" % df['Número de transcritos'].max())
 
+##################################################################################################
 maxTranscrito = df['Número de transcritos'].max()
 print("Gene com maior número de transcritos (linha inteira):")
 print(df[df['Número de transcritos'] == maxTranscrito])
-
 print("Gene com maior número de transcritos (nome):")
 print(df[df['Número de transcritos'] == maxTranscrito]['Nome'])
 
+##################################################################################################
 print("Ordenando por símbolo:")
 print(df.sort_values('Símbolo'))
 
+##################################################################################################
 print("Ordenando por quantidade de transcritos (crescente):")
 print(df.sort_values('Número de transcritos'))
 
+##################################################################################################
 print("Ordenando por quantidade de transcritos (decrescente):")
 print(df.sort_values('Número de transcritos', ascending=False))
