@@ -22,13 +22,19 @@ media_ap = (nota1 + nota2 * 2 + nota3 * 3 + me)/7
 
 print("Identificador = $d" % identificador)
 
+status = "aprovado"
+
 if media_ap >= 90:
-    print("A - aprovado")
+    conceito = "A"
 elif media_ap >= 75:
-    print("B - aprovado")
+    conceito = "B"
 elif media_ap >= 60:
-    print("C - aprovado")
+    conceito = "C"
 elif media_ap >= 40:
-    print("D - reprovado")
+    conceito = "D"
+    status = "reprovado"
 else:
-    print("E - reprovado")
+    conceito = "E"
+    status = "reprovado"
+
+print("Conceito = %s. Situação = %s" % (conceito,status))
