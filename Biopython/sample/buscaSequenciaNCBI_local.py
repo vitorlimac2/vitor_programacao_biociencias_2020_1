@@ -26,5 +26,35 @@ print("Fim da busca local...")
 # Abrindo resultado
 blast_result = open(meuOutput, "r")
 
-linhas = blast_result.read()
-print(linhas)
+
+
+##### indíces para os resultados do blast em formato 6 ("outfmt=6")
+
+qseqid = 0 #query (e.g., unknown gene) sequence id
+sseqid = 1 # subject (e.g., reference genome) sequence id
+pident = 2 # percentage of identical matches
+length = 3 # alignment length (sequence overlap)
+mismatch = 4 # number of mismatches
+gapopen = 5 # number of gap openings
+qstart = 6 # start of alignment in query
+qend = 7 # end of alignment in query
+sstart = 8 # start of alignment in subject
+send = 9 # end of alignment in subject
+evalue = 10 # expect value
+bitscore = 11 # bit score
+
+results = blast_result.read()
+s = results.split('\n')
+
+for linha in s:
+    hit = linha.split('\t')
+
+    if len(hit) != 12:
+        break
+
+    print("Sequência de busca: %s" % hit[qseqid])
+    print("Sequência encontrada: %s" % hit[sseqid])
+    print("Score = %s" % hit[bitscore])
+    print("Identidade = %s" % hit[pident])
+    print("E-value = %s" % hit[evalue])
+    print("________________________________________________")
