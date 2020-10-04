@@ -26,8 +26,6 @@ print("Fim da busca local...")
 # Abrindo resultado
 blast_result = open(meuOutput, "r")
 
-
-
 ##### indíces para os resultados do blast em formato 6 ("outfmt=6")
 
 qseqid = 0 #query (e.g., unknown gene) sequence id
