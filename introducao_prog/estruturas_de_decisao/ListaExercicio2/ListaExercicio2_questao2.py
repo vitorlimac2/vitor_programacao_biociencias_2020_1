@@ -15,4 +15,3 @@ else:
         print("Primeiro número é maior que o segundo número!")
     elif num1 < num2:
         print("Primeiro número é menor que o segundo número!")
-
