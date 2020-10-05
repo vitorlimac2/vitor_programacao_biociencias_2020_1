@@ -1,13 +1,13 @@
 ## Lista 2 - questao 5
 
 ## ler três números positivos
-## Escrever em ordem crescente
+## Escrever em ordem DECRESCENTE
 
 num1 = float(input("Digite primeiro número:"))
 num2 = float(input("Digite segundo número:"))
 num3 = float(input("Digite terceiro número:"))
 
-#### existe as seguintes possibilidades:
+#### existe as seguintes possibilidades para ordem decrescente:
 
 ## num1 > num2 > num3
 if num1 > num2 and num2 > num3:
