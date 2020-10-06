@@ -9,5 +9,3 @@ if num % 2 == 0:
     print("O número %d é par" % num)
 else:
     print("O número %d é ímpar" % num)
-
-

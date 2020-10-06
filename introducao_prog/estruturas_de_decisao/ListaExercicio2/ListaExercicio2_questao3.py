@@ -13,10 +13,6 @@ b = int(input("Digite variavel B:"))
 #### variavel que recebe valor temporario
 auxiliar = 0
 
-### quem eh valor menor e maior
-a = b
-b = a
-
 if a > b:
     print("A antes = %d" % a)
     ## guardar primeiro valor de a
