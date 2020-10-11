@@ -2,9 +2,11 @@ from Bio.Blast.Applications import *
 
 ### endereço completo para os arquivos
 
-sequencia = "/home/vitor/PycharmProjects/VitorCoelho/Biopython/data/TcCLB.506717.80_AA.fasta"
-sequenciasAlvo = "/home/vitor/PycharmProjects/VitorCoelho/Biopython/data/TriTrypDB-47_TcruziCLBrenerEsmeraldo-like_AnnotatedProteins.fasta"
-meuOutput = "/home/vitor/PycharmProjects/VitorCoelho/Biopython/data/out.blastp.outfmt6.txt"
+sequencia = "..\\data\\TcCLB.506717.80_AA.fasta"
+sequenciasAlvo = "..\\data\\TriTrypDB-47_TcruziCLBrenerEsmeraldo-like_AnnotatedProteins.fasta"
+meuOutput = "..\\data\\out.blastp.outfmt6.txt"
+
+blastp_path = "C:\\Program Files\\NCBI\\blast-2.10.1+\\bin\\blastp"
 
 ## criando a linha de comando para o blastp (proteína vs proteína)
 
@@ -12,7 +14,7 @@ meuOutput = "/home/vitor/PycharmProjects/VitorCoelho/Biopython/data/out.blastp.o
 ## NcbiblastnCommandline - nucleotideo vs nucleotideo
 ## NcbiblastxCommandline - nucleotideo -> traduz para proteina vs proteina
 
-linha_de_comando_blastp = NcbiblastpCommandline(query=sequencia, subject=sequenciasAlvo, outfmt=6, out=meuOutput, evalue=0.05)
+linha_de_comando_blastp = NcbiblastpCommandline(cmd=blastp_path, query=sequencia, subject=sequenciasAlvo, outfmt=6, out=meuOutput, evalue=0.05)
 
 print("A linha de comando para o blastp é:\n%s" % linha_de_comando_blastp)
 
@@ -46,6 +48,7 @@ s = results.split('\n')
 
 for linha in s:
     hit = linha.split('\t')
+    print(linha)
 
     if len(hit) != 12:
         break

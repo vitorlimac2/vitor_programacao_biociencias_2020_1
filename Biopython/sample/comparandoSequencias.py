@@ -48,4 +48,4 @@ else:
 if str(sequencia1) == str(sequencia3):
     print("Sequência 1 é igual à Sequência 3")
 else:
-    print("Sequência 1 é diferente da Sequência 3")
+        print("Sequência 1 é diferente da Sequência 3")

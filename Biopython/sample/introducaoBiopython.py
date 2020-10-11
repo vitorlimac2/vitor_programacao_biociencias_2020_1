@@ -1,6 +1,7 @@
 ### declarando o uso da biblioteca
 
 from Bio.Seq import Seq
+from Bio.SeqUtils import GC, nt_search
 
 ### declaro uma sequência que é um objeto da classe Seq usando a string especificada
 ## O construtor Seq(string_seq) da classe Seq recebe como argumentos uma sequência (string_seq)
@@ -68,3 +69,8 @@ proteina_sequencia1 = sequencia1.translate()
 print("Sequência de aminoácidos do RNA de Sequência 1: %s" % proteina_sequencia1)
 print("Sequência de aminoácidos da Sequência 1: %s" % sequencia1.translate())
 
+## conteudo GC
+print(GC(sequencia1))
+
+## buscando sub-sequencia
+print(nt_search(str(sequencia1), "TCGA"))

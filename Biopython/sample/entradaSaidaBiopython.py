@@ -2,7 +2,10 @@
 
 from Bio import SeqIO
 
-for i in SeqIO.parse("/home/vitor/PycharmProjects/VitorCoelho/Biopython/data/TcCLB.506717.80_AA.fasta", "fasta"):
+refArquivoEntrada1 = open("..\\data\\TcCLB.506717.80_AA.fasta", "r")
+
+
+for i in SeqIO.parse(refArquivoEntrada1, "fasta"):
 
     # imprime o cabecalho
     print(i.id)
@@ -15,13 +18,14 @@ for i in SeqIO.parse("/home/vitor/PycharmProjects/VitorCoelho/Biopython/data/TcC
 
 
 
+
 ########## escrevendo um arquivo com proteinas onde:
 # a) comprimento maior que 2000
 # b) primeiro aminoácido é uma metionina
 # c)imprima também o identificador e a sequencia separada por tabulacao
 
-refArquivoEntrada = open("/home/vitor/PycharmProjects/VitorCoelho/Biopython/data/TriTrypDB-47_TcruziCLBrenerEsmeraldo-like_AnnotatedProteins.fasta", "r")
-refArquivoSaida = open("/home/vitor/PycharmProjects/VitorCoelho/Biopython/data/TriTrypDB-47_TcruziCLBrenerEsmeraldo-like_AnnotatedProteins_maiorQue2000AA.fasta", "w")
+refArquivoEntrada = open("..\\data\\TriTrypDB-47_TcruziCLBrenerEsmeraldo-like_AnnotatedProteins.fasta", "r")
+refArquivoSaida = open("..\\data\\TriTrypDB-47_TcruziCLBrenerEsmeraldo-like_AnnotatedProteins_maiorQue2000AA.fasta", "w")
 
 ### parse do arquivo multi-FASTA
 for i in SeqIO.parse(refArquivoEntrada, "fasta"):
