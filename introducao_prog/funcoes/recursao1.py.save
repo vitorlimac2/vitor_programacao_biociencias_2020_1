@@ -1,0 +1,29 @@
+## módulo interno de Python com diversas funcionalidades
+## que permite o interpretador interagir com o sistema operacional
+from sys
+
+def soma_recursiva(n):
+  if(n > 0):
+    resultado = n + soma_recursiva(n - 1)
+  else:
+    resultado = 0
+  def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+
+  return resultado
+
+### lendo argumento passado na linha de comando
+### argv[0] é o nome do script "recursao1.py"
+### argv[1] será o número digitado pelo usuário
+numero = int(sys.argv[1])
+
+soma_recursiva(numero)
+
