@@ -13,7 +13,7 @@ numeros_lidos = 0
 
 while numero != 0:
     soma = soma + numero
-    numero_lidos = numero_lidos + 1
+    numeros_lidos = numeros_lidos + 1
     numero = int(input("Digite um número:"))
 
 print(soma)
